@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="js/jquery-2.2.2.js"></script>
+		<style>
+			body{
+				width: 100%;
+				height: 500px;
+				
+				text-align: center;
+				margin: 0 auto;
+				padding: 0;
+			}
+			ul li{
+				width: 500px;
+				list-style: none;
+			}
+			ul{
+				/*display: none;*/
+			}
+			a{
+				width: 500px;
+				display: block;
+				line-height: 2em;
+				text-decoration: none;
+				color: #000000;
+				text-align: left;
+			}
+			a:hover{
+				background: #ddd;
+			}
+			#name{
+				display: none;
+				/*margin-right: 100px;*/
+				text-indent: 0.5em;
+				width: 500px;
+				/*margin: 0 auto;*/
+				border: 1px #ddd solid;
+				box-shadow: 0 0 1px 1px #ddd;
+			}
+			.floatspan{
+				float: right;
+			}
+			#inp{
+				float: left;
+				text-indent: 0.5em;
+				/*margin-top: 200px;*/
+				width: 500px;
+				height: 30px;
+				font-size: 16px;
+			}
+			.span{
+				text-align: center;
+				display: inline-block;
+				width: 100px;
+				height: 36px;
+				line-height: 38px;
+				float: left;
+				color: #fff;
+				background: #3385ff;
+			}
+			.span:hover{
+				background: #3385ff;
+			}
+			.div{
+				display: inline-block;
+				width: 500px;
+				margin: 0 auto;
+			}
+			.top{
+				padding-top: 200px;
+				display: inline-block;
+				width: 700px;
+			}
+			
+		</style>
+		<script>
+//			$.ajax({
+//				type:'post',
+//				url:'ajax/getNews.php',
+//				//dataType:'jsonp',
+//				//data:{username:'Sun',age:21},
+//				dataType:'json',
+//				success:function(data){
+//					var ul = document.createElement('ul');
+//					document.body.appendChild(ul);
+//					for(var i = 0; i < data.length; i++){
+//						var li = document.createElement('li');
+//						ul.appendChild(li);
+//						li.innerHTML='<a href="#">' + data[i].title + '</a>'
+//						+ '<span class="floatspan">' + data[i].date + '</span>'
+//					}
+////					data[0].title
+////					console.log(data);
+//				},
+//				error:function(){
+//					alert('error')
+//				}
+//			})
+
+
+			
+
+			
+		</script>
+	</head>
+	<body>
+		<div class="div">
+			<div class="top">
+				<input id="inp" type="text" list="name"/><a id="span" class="span" href="">搜索</a>
+			</div>
+			<div id="name">
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+		<!--<div class="one">
+			
+		</div>-->
+
+		
+		
+	</body>
+	<script>
+
+		var inp = document.getElementById('inp');
+		var list = document.getElementById('name');
+		var oSpan = document.getElementById('span');
+//		console.log(list.children);
+
+		inp.focus();
+		
+		
+		function fn(data){
+//		console.log(data.s);
+			for(var i = 0; i < 4; i++){
+				list.children[i].innerHTML = data.s[i];
+				list.children[i].onclick = function(){
+					list.style.display = 'none';
+					inp.value = this.innerHTML;
+					oSpan.href = 'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=99889654_s_hao_pg&wd=' + inp.value + '&rsv_pq=fabfd93a0000a515&rsv_t=e12bQ3apWdJyEwPkwdQQuq%2F8hktkRkmGoW6we9x5fBtd1JKLM5n15rAcmt%2BiG7SMSPU9SBRXRkc&rqlang=cn&rsv_enter=1&inputT=725436&rsv_sug3=99&rsv_sug1=59&rsv_sug7=100&rsv_sug2=0&rsv_sug4=1005782';
+				}
+			}
+			if(list.children[3].innerHTML == 'undefined'){
+				list.style.display = 'none';
+			}else{
+				list.style.display = 'block';
+			}
+			
+			
+			
+		}
+	
+	
+
+	inp.oninput = function(arr){
+		var sc = document.createElement('script');
+		sc.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&json=1&p=3&sid=1462_21097_17001&req=2&csor=2&pwd=w&cb=fn&_=1507690427295';
+
+		document.body.appendChild(sc);
+		document.body.removeChild(sc);
+		list.style.display = 'block';
+		
+		var oValue = inp.value;
+		if(oValue == '')	list.style.display = 'none';
+//		console.log(oValue);
+	}
+		
+	</script>
+</html>
