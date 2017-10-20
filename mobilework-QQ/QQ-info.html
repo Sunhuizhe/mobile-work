@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QQ info</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	    <style>
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	body{
+	    		width: 100%;
+	    	}
+	    	
+	    /*QQ-login pageone*/
+	    	#username,#password{
+				width: 80%;
+			};
+			body{
+				width: 100%;
+			}
+			#QQ-login{
+				width: 100%;
+				padding: 20px 0;
+			}
+			.btn-login{
+				/*width: 50%;*/
+				/*width: 100%;*/
+				margin: 10px 0!important;
+			}
+			#btn-signin{
+				display: none;
+			}
+			#subbtn{
+				padding: 10px 0;
+			}
+			#loginform{
+				padding: 15px;
+			}
+			#error{
+				color: red;
+			}
+	    	
+	    	
+	    /*QQ-info pagetwo*/
+	    	img{
+	    		border-radius: 50%!important;
+	    	}
+	    	.QQtx{
+	    		width: 35px!important;
+	    	}
+	    	.header{
+	    		background: url(images/bg-2.png);
+	    	}
+	    	#search{
+	    		margin: 0;
+	    	}
+	    	.myicon{
+	    		width: 60px;
+	    		padding: 10px;
+	    	}
+	    	.info{
+	    		font-size: 12px;
+	    		color: #aaa;
+	    	}
+	    	.name{
+	    		color: #444;
+	    		width: 100%;
+	    	}
+	    	.pos{
+	    		position: fixed;
+	    		bottom: 0;
+	    	}
+	    	.disline{
+	    		float: left;
+	    	}
+	    	.disline a{
+	    		height: 40px;
+	    	}
+	    	.mara{
+	    		position: fixed;
+	    		bottom: 0;
+	    		width: 100%;
+	    		height: 40px;
+	    	}
+	    	.mara a{
+
+	    	}
+	    	.time{
+	    		/*float: right;*/
+	    		color: #aaa;
+	    		font-size: 12px;
+	    		font-weight: normal;
+	    		position: absolute;
+	    		right: 0.88em;
+	    	}
+	    	.ui-li-count{
+	    		margin-top: 3px;
+	    	}
+	    	
+	    	
+	    	/*QQ-signup pagethree*/
+	    	.img3{
+	    		padding: 0 10px;
+	    	}
+	    	#QQ-signup{
+	    		width: 100%;
+	    		padding: 20px 0;
+	    	}
+	    	#signupform{
+	    		padding: 0 15px;
+	    	}
+	    	#btn-up{
+	    		margin: 10px 0;
+	    		display: none;
+	    	}
+	    	#sub-btnup{
+	    		margin: 10px 0;
+	    	}
+	    	#telerr{
+	    		color: red;
+	    	}
+	    </style>
+	</head>
+	<body>
+		
+		<!--pageone-->
+		<div data-role='page' id="pageone">
+			<img id="QQ-login" src="images/QQ-login.png"/>
+			
+			<form id="loginform"> 
+				<input type="text" id="username" placeholder="QQ号">
+				<input type="password" id="password" placeholder="密码"/>
+				
+				<!--错误信息提示弹窗-->
+				<p id="error"></p>
+				
+				<a href="#pagethree" data-mini='true' data-role='button' id="btn-signup" class="btn-login">注册</a>
+				<a data-mini='true' data-role='button' id="subbtn" class="btn-login">登录</a>
+				<a href="#pagetwo" data-mini='true' data-role='button' id="btn-signin" class="btn-login">登录</a>
+			</form>
+		</div>
+		
+		<!--pagetwo-->
+		<div data-role="page" id="pagetwo">
+			
+			<!--头部-->
+		    <div class="header" data-role="header">
+		    	<a href="#" data-role='none'>
+		    		<img class="QQtx" style="width: 40px;" src='images/QQ.jpg' alt=""/>
+		    	</a>
+		    	<!--<a href="#" data-icon='person' data-iconpos='notext'></a>-->
+		        <h1>消息</h1>
+		        <a href="#" data-role='button' data-icon='plus' data-iconpos='notext'></a>
+		    </div>
+			
+		    <div data-role="content">
+        		
+        		<!--消息列表-->
+        		<ul id="infolist" data-role="listview"  data-filter="true" data-filter-placeholder="搜索">
+		          	<!--列表项-->
+		          	<li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+		            
+		            <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ1.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息...<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ2.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ3.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ4.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ5.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ6.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ7.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+			        
+			        <li data-icon='false'>
+			          	<a class="mya" href="#">
+			          		<img class="myicon" src="images/QQ8.jpg"/>
+			          		
+			          		<h2 class="name">昵称 <span class="time">14：10</span></h2>
+
+			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
+			          	
+			          </a>
+			        </li>
+		        </ul>
+		    </div>
+		
+		    <div data-role="footer" data-position='fixed'>
+			    <div data-role="navbar" data-iconpos='top'>
+		      		<ul>
+				        <li><a href="#" data-icon="info" class="ui-btn-active-persist">消息</a></li>
+				        <li><a href="#" data-icon="grid" class="ui-btn-active-persist">联系人</a></li>
+				        <li><a href="#" data-icon="star" class="ui-btn-active-persist">动态</a></li>
+				    </ul>
+		    	</div>
+			</div>
+	    </div> 
+	
+		<!--pagethree-->
+		<div data-role='page' id="pagethree">
+				<img id="QQ-signup" src="images/QQ-login.png" />
+			
+			<form id="signupform">
+
+				<input id="text" type="text" placeholder="昵称"/>
+				<input id="passwd" type="password" placeholder="密码"/>
+				<input id="tel" type="text" placeholder="手机号"/>
+				<p id="telerr"></p>
+				<a id="sub-btnup" data-role='button' data-mini='true'>注册</a>
+				<a href="#pageone" id="btn-up" data-role='button' data-mini='true'>注册</a>
+			</form>
+		</div>
+	
+	</body>
+	
+	<script>
+		
+//		pageone one one one one one one one one one one one one
+        //取元素
+		var username = document.getElementById('username');
+		var pwd = document.getElementById('password');
+		var btnup = document.getElementById('btn-signup');
+		var btnin = document.getElementById('btn-signin');	
+		var err = document.getElementById('error');
+//		console.log(err.innerHTML);
+		
+		$('#subbtn').click(function(){
+			if(username.value == ''){
+				err.innerHTML = '帐号不能为空！';
+			}else if(pwd.value == ''){
+				err.innerHTML = '密码不能为空！';
+			}else{
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					data:{status:'login',userID:username.value,password:pwd.value},
+					success:function(data){
+						console.log(data);
+						if(data == 0){
+	//						console.log(err.innerHTML);
+							err.innerHTML = '用户名不存在！';
+						}
+						else if(data == 2){
+							err.innerHTML = '用户名与密码不符！';
+						}
+						else{
+							$('#btn-signin').click();
+	//						location.href = 'http://www.baidu.com'
+						}
+					},
+					error:function(err){
+						console.log(err.message);
+					}
+				})
+			}	
+		})
+		
+			
+			
+		
+		
+//		pagethree three three three three three three three three three
+		var textname = document.getElementById('text');
+		var paswd = document.getElementById('passwd');
+		var tel = document.getElementById('tel');
+		var telerr = document.getElementById('telerr');
+		
+		$('#sub-btnup').click(function(){
+			if(textname.value == ''){
+				telerr.innerHTML = '昵称不能为空！';
+			}else if(paswd.value == ''){
+				telerr.innerHTML = '密码不能为空！';
+			}else if(tel.value == ''){
+				telerr.innerHTML = '手机号不能为空！';
+			}else{
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					data:{status:'register',userID:tel.value,password:paswd.value},
+					success:function(data){
+						console.log(data);
+						if(data == 0){
+	//						console.log(err.innerHTML);
+							telerr.innerHTML = '手机号已注册！';
+	//						btnin.href='';
+						}
+						else if(data == 2){
+							telerr.innerHTML = '数据库报错！';
+	//						btnin.href='';
+						}
+						else if(data == 1){
+							$('#btn-up').click();
+						}
+					},
+					error:function(err){
+						console.log(err.message);
+	//					document.write(err.message);
+					}
+				})
+			}
+		})
+		//username:1233456 password:123456
+		
+	
+//		pagetwo two two two two two two two two two two two two two two two two 
+//		$(document).on('pagecreate',function(){
+//			$('#infolist').on('taphold','li',function(){
+//				$('#infolist').prepend($(this));
+//			})
+//		})
+		//tap    taphold长按 		swipe滑动 		swipeleft	swiperight
+	</script>
+</html>
