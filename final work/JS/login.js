@@ -34,23 +34,24 @@ $('#btn').click(function(){
 		if(pwd.value == ''){
 			$('#pwderr').html('密码不能为空！')
 		}else{
-			$.ajax({
-				type:"get",
-				url:"http://datainfo.duapp.com/shopdata/userinfo.php",
-				data:{status:'login',userID:userid.value,password:pwd.value},
-				success:function(data){
-					console.log(data);
-					if(data == 0){
-						usererr.innerHTML = '用户名不存在！';
-					}
-					else if(data == 2){
-						usererr.innerHTML = '用户名与密码不符！';
-					}
-					else{
-						localStorage.setItem('userID',userid.value);
-						location.href = 'index.html';
-					}
-				},
+			location.href = 'index.html';
+			// $.ajax({
+			//	type:"get",
+			//	url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			//	data:{status:'login',userID:userid.value,password:pwd.value},
+			//	success:function(data){
+			//		console.log(data);
+			//		if(data == 0){
+			//			usererr.innerHTML = '用户名不存在！';
+			//		}
+			//		else if(data == 2){
+			//			usererr.innerHTML = '用户名与密码不符！';
+			//		}
+			//		else{
+			//			localStorage.setItem('userID',userid.value);
+			//			location.href = 'index.html';
+			//		}
+			//	},
 				error:function(err){
 					console.log(err);
 				}
