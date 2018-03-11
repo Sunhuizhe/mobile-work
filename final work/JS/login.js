@@ -52,10 +52,10 @@ $('#btn').click(function(){
 			//			location.href = 'index.html';
 			//		}
 			//	},
-				error:function(err){
-					console.log(err);
-				}
-			})
+			//	error:function(err){
+			//		console.log(err);
+			//	}
+			//})
 		}
 	}		
 })
