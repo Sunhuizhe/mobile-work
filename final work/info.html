@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>详情页</title>
+		<link rel="stylesheet" href="CSS/info.css"/>
+		<link rel="stylesheet" href="CSS/swiper-3.4.2.min.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/swiper-3.4.2.jquery.min.js"></script>
+		<script src="JS/rem.js"></script>
+	</head>
+	<body>
+		<!--弹出消息-->
+		<div class="fadeud">
+			<p>已加入购物车</p>
+		</div>
+		<div class="fadeudfail">
+			<p>加入购物车失败</p>
+		</div>
+		<!--头部-->
+		<div class="navbar">
+			<div class="navin">
+				<span class="back"><b><</b></span>
+				<div class="title">详情</div>
+			</div>
+		</div>
+		<!--内容-->
+		<div class="content">
+			<!--banner图片-->
+			<div class="swiper-container">
+				<div style="height: 5rem;" class="swiper-wrapper">
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--详情信息-->
+			<div class="text">
+				<div class="good-info"></div>
+				<div class="share-icon">
+					<img src="images/share.png"/>
+				</div>
+				<div class="price">
+					￥<span class="price-icon"></span>
+					<span class="count">
+						月销：<span id="count-id"></span>笔
+					</span>
+				</div>
+			</div>
+			<!--型号选择-->
+			<div >
+				<ul class="choose">
+					<li>
+						<div class="choose-color">选择颜色、大小<span>></span></div>
+					</li>
+					<li>
+						<span>购买数量：</span>
+						<button id="reduce">-</button>
+						<input id="buy-number" type="number" value="1"/>
+						<button id="plus">+</button>
+					</li>
+				</ul>
+				
+				
+			</div>
+			<div>
+				<div class="detail-text">
+					<span>——详情——</span>
+				</div>
+				<div class="imgs"></div>
+				<div class="info"></div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+				<ul style="font-size: 0.36rem;" id="foot" class="foot">
+					<li><a href="index.html"><img src="images/goin.png"/><p>进店</p></a></li>
+					<li><a href="buy-list.html"><img src="images/serve.png"/><p>客服</p></a></li>
+					<li><a href="myset.html"><img src="images/star.png"/><p>收藏</p></a></li>
+				</ul>
+				<div class="last-two">
+					<span onclick="updatecar()" id="addcar">加入购物车</span>
+					<span id="buynow">立即购买</span>
+				</div>
+			</div>
+	</body>
+	<script src="JS/info.js"></script>
+</html>

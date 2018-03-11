@@ -1,0 +1,172 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.mybody{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+/*弹框*//*弹框*//*弹框*//*弹框*//*弹框*//*弹框*//*弹框*/
+.fadeud{
+	display: none;
+	font-size: 0.34rem;
+	color: #fff;
+	position:fixed;
+	z-index: 9999;
+	bottom: 2.3rem;
+	left: 2.5rem;
+}
+.fadeud >p{
+	background: rgba(0,0,0,0.5);
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.1rem;
+}
+.fadeudfail{
+	display: none;
+	font-size: 0.34rem;
+	color: #fff;
+	position:fixed;
+	z-index: 9999;
+	bottom: 2.3rem;
+	left: 2.3rem;
+}
+.fadeudfail >p{
+	background: rgba(0,0,0,0.5);
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.1rem;
+}
+.navbar{
+	height: 1.5rem;
+	background: #f5deb3;
+}
+.navin{
+	height: 1rem;
+	padding-top: 0.2rem;
+}
+.title{
+	font-size: 0.5rem;
+	color: #8B4513;
+}
+.less-text{
+	display: block;
+	font-size: 0.2rem;
+	color: #CD853F;
+}
+.search{
+	border: #CD853F 1px solid;
+	height: 0.6rem;
+}
+.icon >img{
+	width: 0.4rem;
+	margin: 0.1rem;
+	float: left;
+}
+.searchinp{
+	color: #CD853F;
+	height: 0.6rem;
+	float: left;
+	border: none;
+	line-height: 0.6rem;
+	width: 90%;
+	text-align: left;
+	font-size: 0.3rem;
+	padding-left: 0.1rem;
+}
+input:focus{
+	outline: none;
+}
+.content{
+	overflow: hidden;
+	clear: both;
+	padding: 0.3rem 0 1.7rem 0;
+}
+#goods-list >li >img{
+	width: 2.7rem;
+	height: 2.7rem;
+	float: left;
+}
+#goods-list >li{
+	width: 2.7rem;
+	float: left;
+	display: inline;
+	border: 1px solid #CD853F;
+	margin: 0.2rem;
+	padding: 0.3rem;
+}
+#goods-list >li >span{
+	/*display: block;*/
+	/*width: 2.7rem;*/
+	padding: 0.2rem 0.1rem;
+	font-size: 0.3rem;
+	float: left;
+}
+#goods-list >li >.icon{
+	padding: 0.1rem 0 0 0.1rem;
+	width: 0.6rem;
+	height: 0.6rem;
+}#goods-list >li >a >img{
+	width: 2.7rem;
+	height: 2.7rem;
+	float: left;
+}
+#goods-list >li{
+	width: 2.7rem;
+	float: left;
+	display: inline;
+	border: 1px solid #CD853F;
+	margin: 0.2rem;
+	padding: 0.3rem;
+}
+#goods-list >li >a >span{
+	/*display: block;*/
+	/*width: 2.7rem;*/
+	padding: 0.2rem 0.1rem;
+	font-size: 0.3rem;
+	float: left;
+}
+#goods-list >li >a >.icon{
+	padding-top: 0.1rem;
+	float: right;
+	width: 0.6rem;
+	height: 0.6rem;
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #f5deb3;
+}
+.foot >li{
+	float: left;
+	list-style:none;
+	width: 33.3%;
+}
+.foot >li >a >img{
+	height: 0.7rem;
+	padding: 0.2rem 0 0.1rem 0;
+}
+.foot >li >a{
+	height: 0.7rem;
+}
+.foot >li >a >p{
+	font-size: 0.32rem;
+	color: #CD853F;
+}
+
+.title{
+	padding: 0.2rem;
+}
+#goods-list >p{
+	font-size: 0.3rem;
+	text-align: left;
+	color: #CD853F;
+	padding-left: 0.2rem;
+}

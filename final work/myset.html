@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>我的</title>
+		<link rel="stylesheet" href="CSS/myset.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/rem.js"></script>
+	</head>
+	<body>
+		<div class="mybody">
+			<!--顶部-->
+			<div class="top">
+				<a href="set.html"><img src="images/set.png" /></a>
+			</div>
+			<!--头部-->
+			<div class="navbar">
+				<div class="navin">
+					<img src="images/QQ.jpg"/><span>拂树'生花︿Sun</span>
+					<div class="userid">userID:<span id="userID"></span></div>
+				</div>
+			</div>
+			<!--内容-->
+			<div class="content">
+				<div class="toplistout">
+					<ul class="toplist">
+						<li><a href="#">待付款</a></li>
+						<li><a href="#">待发货</a></li>
+						<li><a href="#">待收货</a></li>
+						<li><a href="#">待评价</a></li>
+						<li><a href="#">退款/售后</a></li>
+					</ul>
+				</div>
+				<div class="mylistout">
+					<ul class="mylist">
+						<li><a href="#">我的订单<span>></span></a></li>
+						<li><a href="#">收藏<span>></span></a></li>
+						<li><a href="#">会员<span>></span></a></li>
+						<li><a href="#">我的足迹<span>></span></a></li>
+						<li><a href="#">物流信息<span>></span></a></li>
+						<li><a href="#">优惠<span>></span></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--底部-->
+			<div class="footer">
+				<ul style="font-size: 0.36rem;" id="foot" class="foot">
+					<li><a href="index.html"><img src="images/icon-1.png"/><p>首页</p></a></li>
+					<li><a href="buy-list.html"><img style="margin-top: ;" src="images/icon-4.png"/><p>购物车</p></a></li>
+					<li><a href="myset.html"><img src="images/icon-3.png"/><p>我的</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('#userID').html(localStorage.getItem('userID'));
+	</script>
+</html>

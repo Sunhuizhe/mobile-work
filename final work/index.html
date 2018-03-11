@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>首页</title>
+		<link rel="stylesheet" href="CSS/index.css"/>
+		<link rel="stylesheet" href="CSS/swiper-3.4.2.min.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/rem.js"></script>
+		<script src="JS/swiper-3.4.2.jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="mybody">
+			<!--弹出消息-->
+			<div class="fadeud">
+				<p>已加入购物车</p>
+			</div>
+			<div class="fadeudfail">
+				<p>加入购物车失败</p>
+			</div>
+			<!--头部-->
+			<div class="navbar">
+				<div class="navin">
+					<div class="title">商城首页</div>
+					<span class="less-text">F A S H I O N A B L E</span>
+				</div>
+			</div>
+			<!--搜索-->
+			<div class="search">
+				<span class="icon"><img id="searchimg" src="images/search.png"/></span>
+				<input class="searchinp" type="search" name="select"/>
+			</div>
+			<!--内容-->
+			<div class="content">
+				
+				<!--banner图片-->
+				<div class="swiper-container">
+					<div style="height: 3.5rem;" class="swiper-wrapper">
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+						<div class="swiper-slide"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				
+				<!--导航-->
+				<div class="nav-content">
+					<ul id="nav-ul" class="nav-ul">
+						
+					</ul>
+				</div>
+				
+				<!--列表-->
+				<ul id="goods-list">
+					
+				</ul>
+			</div>
+			
+			<!--底部-->
+			<div class="footer">
+				<ul style="font-size: 0.36rem;" id="foot" class="foot">
+					<li><a href="index.html"><img src="images/icon-1.png"/><p>首页</p></a></li>
+					<li><a href="buy-list.html"><img src="images/icon-4.png"/><p>购物车</p></a></li>
+					<li><a href="myset.html"><img src="images/icon-3.png"/><p>我的</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="JS/index.js"></script>
+</html>

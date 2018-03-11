@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #CD853F;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.mybody{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+.navbar{
+	height: 3.3rem;
+	background: #f5deb3;
+}
+.top{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 1rem;
+	background: #f5deb3;
+}
+.top >a >img{
+	width: 0.5rem;
+	float: left;
+	padding: 0.2rem;
+}
+.navin{
+	padding: 1.5rem 0 0 0.3rem;
+}
+.navin >img{
+	float: left;
+	width: 1.3rem;
+	border-radius: 50%;
+	
+}
+.navin >span{
+	display: block;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	float: left;
+	font-size: 0.5rem;
+	padding-left: 0.3rem ;
+}
+.userid{
+	float: left;
+	padding-left: 0.3rem;
+	font-size: 0.32rem;
+	text-align: left;
+}
+#userID{
+	padding: 0.2rem;
+}
+ul{
+	font-size: 0.36rem;
+	
+}
+.toplist{
+	margin-top: 0.02rem;
+	padding: 0.15rem 0;
+	background: #f5deb3;
+}
+.toplist >li{
+	/*background: #f5deb3;*/
+
+	list-style: none;
+	display: inline;
+	/*float: left;*/
+}
+.toplist >li >a{
+	color: #8B4513;
+	padding: 0.15rem 0.1rem;
+}
+.mylistout{
+	padding: 0.3rem;	
+}
+.mylist{
+	width: 100%;
+}
+.mylist >li{
+	text-align: left;
+	list-style: none;
+
+}
+.mylist >li >a{
+	display: inline-block;
+	text-align: left;
+	width: 90%;
+	padding: 0.3rem 0.3rem 0.15rem 0.3rem;
+	color: #8B4513;
+}
+.mylist >li >a >span{
+	float: right;
+}
+.out-btn{
+	width: 4rem;
+	border: none;
+	font-size: 0.35rem;
+	background: #f00;
+	color: #fff;
+	padding: 0.1rem 0.3rem;
+	border-radius:0.1rem ;
+}
+.footer{
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #f5deb3;
+}
+.foot >li{
+	float: left;
+	list-style:none;
+	width: 33.3%;
+}
+
+.foot >li >a >img{
+	height: 0.7rem;
+	padding: 0.2rem 0 0.1rem 0;
+}
+.foot >li >a >p{
+	font-size: 0.32rem;
+	color: #CD853F;
+}

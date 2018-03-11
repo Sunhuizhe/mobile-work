@@ -1,0 +1,29 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+.swiper-pagination-bullet-active{
+	background: #CD853F;
+}
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+/*.swiper-slide{
+	background-size: cover;
+}*/
+a{
+	text-decoration: none;
+	font-size: 0.4rem;
+	border: 1px solid #de5a41;
+	color: #de5a41;
+	padding: 0.07rem 0.5rem;
+	border-radius: 0.5rem;
+}
+button{
+	width: 5rem;
+	border: none;
+	background: rgba(0,0,0,0);
+	position: relative;
+	top: 10.15rem;
+}

@@ -1,0 +1,53 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: white;
+}
+html,body{
+	background: #f5deb3;
+	width: 100%;
+	height: 100%;
+}
+.mybody{
+	width: 100%;
+	height: 100%;
+}
+#logo{
+	margin: 1.7rem 0;
+}
+.login-info > input{
+	color: #e19926;
+	font-size: 0.4rem;
+	border: #e19926 0.03rem solid;
+	border-style: none;
+	border-bottom-style: solid;
+	background-color: rgba(0,0,0,0);
+	text-align: left;
+	width: 5rem;
+	line-height: 0.5rem;
+	outline: none;
+}
+.login-info>p{
+	width: 5rem;
+	margin: 0 1.3rem;
+	text-align: left;
+}
+.btn{
+	background: #e19926;
+	border: none;
+}
+.btn:active{
+	background: #CD853F;
+}
+.btn > a{
+	text-decoration: none;
+	color: white;
+	padding: 0.8rem;
+	line-height: 0.7rem;
+	font-size: 0.37rem;
+}
+#usererr,#pwderr{
+	color: red;
+	font-size: 0.3rem;
+}

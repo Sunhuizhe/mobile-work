@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>启动动画</title>
+		<link rel="stylesheet" href="CSS/login-regist.css"/>
+		<link rel="stylesheet" href="CSS/first.css"/>
+		<link rel="stylesheet" href="CSS/swiper-3.4.2.min.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/rem.js"></script>
+		<script src="JS/swiper-3.4.2.jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background:url(images/bg-1.jpg);background-size:cover;">
+				</div>
+				<div class="swiper-slide" style="background:url(images/bg-2.jpg);background-size:cover;">
+				</div>
+				<div class="swiper-slide" style="background:url(images/bg-3.jpg);background-size:cover;">
+					<button id="to-btn"><a id="btn-a">开启购物之旅</a></button>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</body>
+	<script>
+		var btn = document.getElementById('btn-a');
+		var mySwiper = new Swiper ('.swiper-container',
+		{
+			direction: 'horizontal',
+			pagination: '.swiper-pagination',
+		})
+		btn.onclick = function(){
+			localStorage.setItem('install','true');
+			location.href = 'index.html';
+		}
+	</script>
+</html>

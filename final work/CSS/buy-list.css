@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.mybody{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+
+.navbar{
+	height: 1.5rem;
+	background: #f5deb3;
+}
+.navin{
+	height: 1rem;
+	padding-top: 0.2rem;
+}
+.navin >span{
+	padding: 0.2rem;
+	font-size: 0.5rem;
+	float: left;
+	color: #CD853F;
+}
+.title{
+	font-size: 0.5rem;
+	color: #8B4513;
+}
+.less-text{
+	display: block;
+	font-size: 0.2rem;
+	color: #CD853F;
+}
+.title{
+	padding: 0.2rem;
+}
+.content{
+	overflow: hidden;
+	clear: both;
+	padding: 0.3rem 0 2.5rem 0;
+}
+#empty{
+	width: 2rem;
+	/*float: left;*/
+	padding-top: 3rem;
+}
+.em-text{
+	font-size: 0.4rem;
+	color: #CD853F;
+}
+.em-text >a{
+	color: #FF8C00;
+}
+#goods-list >li >a >img{
+	width: 2.5rem;
+	height: 2.5rem;
+	float: left;
+}
+#goods-list >li{
+	/*width: 100%;*/
+	float: left;
+	/*display: inline;*/
+	border: 1px solid #CD853F;
+	margin: 0.2rem;
+	padding: 0.3rem;
+}
+#goods-list >li >a >span{
+	/*display: block;*/
+	text-align: left;
+	width: 3rem;
+	padding: 0.1rem 0.2rem;
+	font-size: 0.3rem;
+	float: left;
+}
+#goods-list >li >a >.icon{
+	float: right;
+	width: 0.6rem;
+	height: 0.6rem;
+}
+.price{
+	display: inline;
+	float: left;
+	color: #f00;
+	font-size: 0.5rem;
+}
+.nor-icon{
+	float: left;
+	padding-top: 0.15rem;
+	padding-left: 0.15rem;
+	color: #CD853F;
+	display: inline;
+	font-size: 0.3rem;
+}
+#goods-list>li >a >.number{
+	/*float: left;*/
+	width: 2rem;
+}
+/*复选复选复选复选复选复选复选复选复选复选复选复选复选复选复选*/
+.check{
+	float: left;
+	/*width: 1rem;*/
+	margin: 1rem 0.2rem 0 0;
+}
+/*复选复选复选复选复选复选复选复选复选复选复选复选复选复选复选*/
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #f5deb3;
+}
+.foot >li{
+	float: left;
+	list-style:none;
+	width: 33.3%;
+}
+.foot >li >a >img{
+	height: 0.7rem;
+	padding: 0.2rem 0 0.1rem 0;
+}
+.foot >li >a{
+	height: 0.7rem;
+}
+.foot >li >a >p{
+	font-size: 0.32rem;
+	color: #CD853F;
+}
+/*全选*//*全选*//*全选*//*全选*//*全选*//*全选*//*全选*//*全选*/
+.pay{
+	height: 0.9rem;
+	color: #CD853F;
+	text-align: left;
+	border-bottom: 0.01rem #EECCAA solid;
+	clear: both;
+	font-size: 0.35rem;
+	padding: 0rem 0 0rem 0.2rem;
+}
+.left{
+	display: inline-block;
+	margin-top: 0.2rem;
+}
+.money{
+	display: inline-block;
+	margin-left: 0.5rem;
+	/*float: right;*/
+}
+.moneyicon{font-size: 0.3rem;}
+#paymoney{
+	color: #f00;
+	font-size: 0.5rem;
+	}
+#calculate{
+	color: #fff;
+	/*display: inline;*/
+	float: right;
+	border: none;
+	width: 2.5rem;
+	height: 0.9rem;
+	background: #CD853F;
+	font-size: 0.3rem;
+}

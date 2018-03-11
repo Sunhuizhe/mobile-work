@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>设置</title>
+		<link rel="stylesheet" href="CSS/set.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/rem.js"></script>
+	</head>
+	<body>
+		<div class="mybody">
+			<!--头部-->
+			<div class="navbar">
+				<span id="aspan"><b><</b><span>设置</span></span>
+				<div class="navin">
+					<img src="images/QQ.jpg"/><span>拂树'生花︿Sun</span>
+					<div class="userid">userID:<span id="userID"></span></div>
+				</div>
+			</div>
+			<!--设置列表-->
+			<div class="mylistout">
+				<ul class="mylist">
+					<li><a href="#">收货地址管理<span>></span></a></li>
+					<li><a href="#">账户与安全<span>></span></a></li>
+					<li><a href="#">新消息通知<span>></span></a></li>
+					<li><a href="#">通用<span>></span></a></li>
+					<li><a href="#">关于Sun城<span>></span></a></li>
+				</ul>
+			</div>
+			<!--退出登录-->
+			<div class="logout">
+				<button class="out-btn"><a href="login.html">退出当前账号</a></button>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('#userID').html(localStorage.getItem('userID'));
+		$('#aspan').click(function(){
+			history.back();
+		})
+	</script>
+</html>

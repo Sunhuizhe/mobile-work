@@ -1,0 +1,200 @@
+/****//****//****//****//****//****//****//****//****//****//****/
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	color: #CD853F;
+}
+.mybody{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+/*弹框*//*弹框*//*弹框*//*弹框*//*弹框*//*弹框*//*弹框*/
+.fadeud{
+	display: none;
+	font-size: 0.34rem;
+	color: #fff;
+	position:fixed;
+	z-index: 9999;
+	bottom: 2.3rem;
+	left: 2.5rem;
+}
+.fadeud >p{
+	background: rgba(0,0,0,0.5);
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.1rem;
+}
+.fadeudfail{
+	display: none;
+	font-size: 0.34rem;
+	color: #fff;
+	position:fixed;
+	z-index: 9999;
+	bottom: 2.3rem;
+	left: 2.3rem;
+}
+.fadeudfail >p{
+	background: rgba(0,0,0,0.5);
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.1rem;
+}
+/*轮播轮播轮播轮播轮播轮播轮播轮播轮播轮播轮播轮播轮播轮播*/
+.swiper-slide >img{
+	width: 100%;
+}
+/****//****//****//****//****//****//****/
+.navbar{
+	height: 1.5rem;
+	background: #f5deb3;
+}
+.navin{
+	height: 1rem;
+	padding-top: 0.2rem;
+}
+.navin >span{
+	padding: 0.2rem;
+	font-size: 0.5rem;
+	float: left;
+	color: #CD853F;
+}
+.title{
+	font-size: 0.5rem;
+	color: #8B4513;
+}
+.less-text{
+	display: block;
+	font-size: 0.2rem;
+	color: #CD853F;
+}
+.title{
+	padding: 0.2rem;
+}
+.content{
+	overflow: hidden;
+	clear: both;
+	padding-bottom: 2.5rem;
+}
+/*内容*//*内容*//*内容*//*内容*//*内容*//*内容*//*内容*/
+.text{
+	text-align: left;
+	padding-left: 0.2rem;
+}
+.good-info{
+	display: inline-block;
+	text-align: left;
+	font-size: 0.3rem;
+	width: 6rem;
+}
+.share-icon{
+	display: inline-block;
+}
+.share-icon >img{
+	width: 0.7rem;
+}
+.price{
+	text-align: left;
+	font-size: 0.3rem;
+}
+.price-icon{
+	color: #f00;
+	font-size: 0.5rem;
+}
+.count{
+	padding-left: 0.5rem;
+}
+/*detail-text*//*detail-text*//*detail-text*//*detail-text*/
+.detail-text{
+	font-size: 0.4rem;
+	/*line-height: 0.5rem;*/
+	height: 0.7rem;
+	padding: 0.3rem 0;
+}
+/*购买信息*/
+.choose{
+	padding: 0.2rem;
+}
+.choose >li{
+	text-align: left;
+	height: 1rem;
+}
+.choose-color{
+	font-size: 0.4rem;
+	height: 1rem;
+	float: left;
+	width: 100%;
+	line-height: 1rem;
+	text-align: left;
+}
+.choose-color >span{
+	float: right;
+}
+.choose >li >span{
+	font-size: 0.4rem;
+}
+.choose >li >button{
+	width: 0.4rem;
+}
+.choose >li >input{
+	width: 0.6rem;
+}
+/*imgsimgsimgsimgsimgsimgsimgsimgsimgsimgsimgs*/
+.imgs >img{
+	width: 100%;
+}
+/*info*//*info*//*info*//*info*//*info*//*info*/
+.info{
+	text-align: left;
+	font-size: 0.37rem;
+	width: 7.1rem;
+	margin-left: 0.2rem;
+}
+/*底部*/
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #f5deb3;
+}
+.foot >li{
+	float: left;
+	list-style:none;
+	width: 1rem;
+}
+.foot >li >a >img{
+	height: 0.5rem;
+	padding: 0.2rem 0 0.1rem 0;
+}
+.foot >li >a{
+	height: 0.7rem;
+}
+.foot >li >a >p{
+	font-size: 0.3rem;
+	color: #CD853F;
+}
+.last-two{
+	font-size: 0.35rem;
+	color: #fff;
+}
+.last-two >span{
+	width: 2.25rem;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	display: block;
+	float: left;
+}
+#addcar{
+	background: #FF8C00;
+}
+#buynow{
+	background: #f00;
+}

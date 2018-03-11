@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>购物车</title>
+		<link rel="stylesheet" href="CSS/buy-list.css"/>
+		<script src="JS/jquery.js"></script>
+		<script src="JS/rem.js"></script>
+	</head>
+	<body>
+		<div class="mybody">
+			<!--头部-->
+			<div class="navbar">
+				<div class="navin">
+					<span id="aspan"><b><</b></span>
+					<div class="title">购物车</div>
+				</div>
+			</div>
+			<!--内容-->
+			<div class="content">
+				<!--列表-->
+				<ul id="goods-list">
+				</ul>
+			</div>
+			<!--底部-->
+			<div class="footer">
+				<div class="pay">
+					<div class="left">
+						<input onchange="checkChange()" type="checkbox" id="chooseall"/>
+						<span class="checkall">全选</span>
+						<div class="money">合计：<span class="moneyicon">￥</span><span id="paymoney"></span></div>
+					</div>
+					<input id="calculate" type="button" value="结算" />
+				</div>
+				<ul style="font-size: 0.36rem;" id="foot" class="foot">
+					<li><a href="index.html"><img src="images/icon-1.png"/><p>首页</p></a></li>
+					<li><a href="buy-list.html"><img src="images/icon-4.png"/><p>购物车</p></a></li>
+					<li><a href="myset.html"><img src="images/icon-3.png"/><p>我的</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="JS/buy-list.js"></script>
+</html>
