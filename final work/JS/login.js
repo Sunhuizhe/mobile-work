@@ -34,6 +34,7 @@ $('#btn').click(function(){
 		if(pwd.value == ''){
 			$('#pwderr').html('密码不能为空！')
 		}else{
+			localStorage.setItem('userID',userid.value);
 			location.href = 'index.html';
 			// $.ajax({
 			//	type:"get",
