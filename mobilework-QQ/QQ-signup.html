@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		title>QQ info</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	    <style>
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	body{
+	    		width: 100%;
+	    	}
+	    	/*QQ-signup pagethree*/
+	    	.img3{
+	    		padding: 0 10px;
+	    	}
+	    	#QQ-signup{
+	    		width: 100%;
+	    		padding: 20px 0;
+	    	}
+	    	#signupform{
+	    		padding: 0 15px;
+	    	}
+	    	#btn-up{
+	    		margin: 10px 0;
+	    		display: none;
+	    	}
+	    	#sub-btnup{
+	    		margin: 10px 0;
+	    	}
+	    	#telerr{
+	    		color: red;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<!--pagethree-->
+		<div data-role='page' id="pagethree">
+				<img id="QQ-signup" src="images/QQ-login.png" />
+			
+			<form id="signupform">
+
+				<input id="text" type="text" placeholder="昵称"/>
+				<input id="passwd" type="password" placeholder="密码"/>
+				<input id="tel" type="text" placeholder="手机号"/>
+				<p id="telerr"></p>
+				<a id="sub-btnup" data-role='button' data-mini='true'>注册</a>
+				<!--<a href="QQ-login.html" id="btn-up" data-role='button' data-mini='true'>注册</a>-->
+			</form>
+		</div>
+	</body>
+	<script>
+//		pagethree three three three three three three three three three
+		var textname = document.getElementById('text');
+		var paswd = document.getElementById('passwd');
+		var tel = document.getElementById('tel');
+		var telerr = document.getElementById('telerr');
+		
+		$('#sub-btnup').click(function(){
+			if(textname.value == ''){
+				telerr.innerHTML = '昵称不能为空！';
+			}else if(paswd.value == ''){
+				telerr.innerHTML = '密码不能为空！';
+			}else if(tel.value == ''){
+				telerr.innerHTML = '手机号不能为空！';
+			}else{
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					data:{status:'register',userID:tel.value,password:paswd.value},
+					success:function(data){
+						console.log(data);
+						if(data == 0){
+	//						console.log(err.innerHTML);
+							telerr.innerHTML = '手机号已注册！';
+	//						btnin.href='';
+						}
+						else if(data == 2){
+							telerr.innerHTML = '数据库报错！';
+	//						btnin.href='';
+						}
+						else if(data == 1){
+//							$('#btn-up').click();
+							location.href = 'QQ-login.html';
+						}
+					},
+					error:function(err){
+						console.log(err.message);
+	//					document.write(err.message);
+					}
+				})
+			}
+		})
+	</script>
+</html>

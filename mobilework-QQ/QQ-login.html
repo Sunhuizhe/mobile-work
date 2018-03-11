@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		title>QQ info</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	    <style>
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	body{
+	    		width: 100%;
+	    	}
+	    	/*QQ-login pageone*/
+	    	#username,#password{
+				width: 80%;
+			};
+			body{
+				width: 100%;
+			}
+			#QQ-login{
+				width: 100%;
+				padding: 20px 0;
+			}
+			.btn-login{
+				/*width: 50%;*/
+				/*width: 100%;*/
+				margin: 10px 0!important;
+			}
+			#btn-signin{
+				display: none;
+			}
+			#subbtn{
+				padding: 10px 0;
+			}
+			#loginform{
+				padding: 15px;
+			}
+			#error{
+				color: red;
+			}
+	    </style>
+		
+	</head>
+	<body>
+		<!--pageone-->
+		<div data-role='page' id="pageone">
+			<img id="QQ-login" src="images/QQ-login.png"/>
+			
+			<form id="loginform"> 
+				<input type="text" id="username" placeholder="QQ号">
+				<input type="password" id="password" placeholder="密码"/>
+				
+				<!--错误信息提示弹窗-->
+				<p id="error"></p>
+				
+				<a href="#pagethree" data-mini='true' data-role='button' id="btn-signup" class="btn-login">注册</a>
+				<a data-mini='true' data-role='button' id="subbtn" class="btn-login">登录</a>
+				<!--<a href="QQ-info.html" data-mini='true' data-role='button' id="btn-signin" class="btn-login">登录</a>-->
+			</form>
+		</div>
+	</body>
+	<script>
+		//pageone one one one one one one one one one one one one
+        //取元素
+		var username = document.getElementById('username');
+		var pwd = document.getElementById('password');
+		var btnup = document.getElementById('btn-signup');
+//		var btnin = document.getElementById('btn-signin');	
+		var err = document.getElementById('error');
+//		console.log(err.innerHTML);
+		
+		$('#subbtn').click(function(){
+			if(username.value == ''){
+				err.innerHTML = '帐号不能为空！';
+			}else if(pwd.value == ''){
+				err.innerHTML = '密码不能为空！';
+			}else{
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+					data:{status:'login',userID:username.value,password:pwd.value},
+					success:function(data){
+						console.log(data);
+						if(data == 0){
+	//						console.log(err.innerHTML);
+							err.innerHTML = '用户名不存在！';
+						}
+						else if(data == 2){
+							err.innerHTML = '用户名与密码不符！';
+						}
+						else{
+//							$('#btn-signin').click();
+							location.href = 'QQ-info.html'
+						}
+					},
+					error:function(err){
+						console.log(err.message);
+					}
+				})
+			}	
+		})
+	</script>
+</html>

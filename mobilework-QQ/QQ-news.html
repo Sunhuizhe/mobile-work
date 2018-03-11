@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QQ news</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	    <script src="js/jquery-2.2.2.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+	    <style>
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	
+	    	/*header*/
+		    .header{
+		    	background: url(images/bg-2.png);
+		    }
+		    .QQtx,.myicon{
+	    		border-radius: 50%!important;
+	    	}
+	    	.QQtx{
+	    		width: 35px!important;
+	    	}
+	    	
+		    /*侧边栏*/
+	    	.topdiv{
+	    		height: 180px;
+	    		width: 100%;
+	    		background: url(images/bg-2.png);
+	    		background-size: 100% 100%;
+	    	}
+	    	.left-top{
+	    		background: none!important;
+	    		border: none;
+	    		box-shadow: none;
+	    		width: 13%;
+	    		margin: 5px;
+	    	}
+	    	.ui-panel-inner{
+	    		padding: 0;
+	    		margin: 0;
+	    		box-shadow: none;
+	    	}
+	    	.text{
+	    		margin-top: 20px;
+	    		padding-left: 20px;
+	    		font-size: 14px;
+	    		color: #777;
+	    	}
+	    	.listimg{
+	    		width: 50px;
+	    		float: left;
+	    		margin-right: 5px;
+	    		border-radius: 50%;
+	    	}
+	    	#span{
+	    		/*display: inline-block;*/
+	    		/*font-weight: bold;*/
+	    		overflow: hidden;
+	    		color: #fff;
+	    		float: left;
+	    		font-size: 27px;
+	    		line-height: 50px;
+	    		padding-bottom: 10px;
+	    	}
+	    	#level span{
+	    		margin-right:5px;
+	    		padding: 2px 4px;
+	    		background: red;
+	    		color: white;
+
+	    		border-radius:3px ;
+	    		/*width: 50px;*/
+	    	}
+	    	#vip{
+	    		font-size: 10px;
+	    	}
+	    	#personal_name{
+	    		margin-top: 5px;
+	    	}
+	    	#leftlist{
+	    		list-style: none;
+	    		/*margin: 0;*/
+	    		padding: 5px;
+	    	}
+	    	#leftlist li{
+	    		margin: 15px;
+	    		/*font-size: 18px;*/
+	    	}
+	    	#leftlist li img{
+	    		/*border-radius: none!important;*/
+	    		float: left;
+	    		width: 20px;
+	    		margin-right:10px ;
+	    	}
+	    	#leftlist li a{
+	    		text-decoration: none;
+	    		color: #333;
+	    	}
+	    	#leftlist li a div{
+	    		font-size: 14px;
+	    		line-height: 25px;
+	    	}
+	    	.botli{
+	    		float: left;
+	    		width: 40%;
+	    		/*display: inline;*/
+	    		padding-left:15px;
+	    		list-style: none;
+	    	}
+	    	.botli a{
+	    		color: #333;
+	    		text-decoration: none;
+	    		font-size: 14px;
+	    	}
+	    	.botimg{
+	    		margin-right: 10px;
+	    		width: 20px;
+	    		float: left;
+	    	}
+	    	.bottomdiv{
+	    		margin-top: 40px;
+	    		/*position:relative;*/
+	    		/*bottom: 0;*/
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div data-role="page">
+			
+		    <!--头部-->
+		    <div class="header" data-role="header">
+		    	<a href="#myPanel" data-role='none'>
+		    		<img class="QQtx" style="width: 40px;" src='images/QQ.jpg' alt=""/>
+		    	</a>
+		    	<!--<a href="#" data-icon='person' data-iconpos='notext'></a>-->
+		        <h1>消息</h1>
+		        <a href="#" data-role='button' data-icon='plus' data-iconpos='notext'></a>
+		    </div>
+		    
+		    <!--侧边栏-->
+		    <div data-role="panel" id="myPanel" class="ui-panel-fixed"> 
+		        <div class="topdiv">
+		        	<a class="left-top"  data-role='button' data-icon='calendar'>打卡</a>
+		        	<div class="text">
+		        		<img class="listimg" src="images/QQ.jpg" />
+		        		<div id="span">
+		        			拂树'生花︿Sun
+		        		</div>
+		        		<!--<span></span>-->
+		        		<div id="level">
+		        			<span id="vip">VIP7</span>等级：49
+		        		</div>
+		        		<div id="personal_name">
+		        			世界很大，留你独自悲哀。
+		        		</div>
+		        	</div>
+		        </div>
+		        
+		        <div class="listdiv">
+		        	<ul id="leftlist">
+		        		<li><a href="#"><img src="images/ace.png"/><div>我的QQ会员</div></a></li>
+		        		<li><a href="#"><img src="images/money.png"/><div>QQ钱包</div></a></li>
+		        		<li><a href="#"><img src="images/draw.png"/><div>个性装扮</div></a></li>
+		        		<li><a href="#"><img src="images/starfile.png"/><div>我的收藏</div></a></li>
+		        		<li><a href="#"><img src="images/image.png"/><div>我的相册</div></a></li>
+		        		<li><a href="#"><img src="images/file.png"/><div>我的文件</div></a></li>
+		        		<li><a href="#"><img src="images/wifi.png"/><div>免流量特权</div></a></li>
+		        	</ul>
+		        </div>
+		        <div class="bottomdiv">
+		        	<ul>
+		        		<li class="botli">
+		        			<a>
+		        				<img class="botimg" src="images/set.png"/>
+		        				<div>设置</div>
+		        			</a>
+		        		</li>
+		        		<li class="botli">
+		        			<a>
+		        				<img class="botimg" src="images/moon.png"/>
+		        				<div>夜间模式</div>
+		        			</a>
+		        		</li>
+		        	</ul>
+		        </div>
+		        
+		    </div>
+	    	<div data-role='content' style="padding: 0;">
+	    		<!--搜索框-->
+		    	<ul style="margin: 0 5px;" data-filter="true" data-filter-placeholder="大家都在搜">
+		    		
+		    	</ul>
+		    	
+		    	<!--导航-->
+		    	<div data-role="navbar">
+		    		<ul>
+	                    <li><a href="QQ-info.html" rel="external" data-icon="comment">好友动态</a></li>
+	                    <li><a href="QQ-friends.html" rel="external" data-icon="location">附近</a></li>
+	                    <li><a href="QQ-news.html" rel="external" data-icon="heart">兴趣部落</a></li>
+	                </ul>
+		    	</div>
+	    	</div>
+	    	
+	    
+	    	<!--底部-->
+			<div data-role="footer" data-position="fixed">
+		    	<div data-role="navbar">
+	                <ul>
+	                    <li><a href="QQ-info.html" rel="external" data-icon="info">消息</a></li>
+	                    <li><a href="QQ-friends.html" rel="external" data-icon="grid">联系人</a></li>
+	                    <li><a href="QQ-news.html" rel="external" data-icon="star">动态</a></li>
+	                </ul>
+	            </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -16,38 +16,11 @@
 	    		width: 100%;
 	    	}
 	    	
-	    /*QQ-login pageone*/
-	    	#username,#password{
-				width: 80%;
-			};
-			body{
-				width: 100%;
-			}
-			#QQ-login{
-				width: 100%;
-				padding: 20px 0;
-			}
-			.btn-login{
-				/*width: 50%;*/
-				/*width: 100%;*/
-				margin: 10px 0!important;
-			}
-			#btn-signin{
-				display: none;
-			}
-			#subbtn{
-				padding: 10px 0;
-			}
-			#loginform{
-				padding: 15px;
-			}
-			#error{
-				color: red;
-			}
+	    
 	    	
 	    	
 	    /*QQ-info pagetwo*/
-	    	img{
+	    	.QQtx,.myicon{
 	    		border-radius: 50%!important;
 	    	}
 	    	.QQtx{
@@ -87,9 +60,6 @@
 	    		width: 100%;
 	    		height: 40px;
 	    	}
-	    	.mara a{
-
-	    	}
 	    	.time{
 	    		/*float: right;*/
 	    		color: #aaa;
@@ -101,61 +71,172 @@
 	    	.ui-li-count{
 	    		margin-top: 3px;
 	    	}
-	    	
-	    	
-	    	/*QQ-signup pagethree*/
-	    	.img3{
-	    		padding: 0 10px;
-	    	}
-	    	#QQ-signup{
+	    	/*侧边栏*/
+	    	.topdiv{
+	    		height: 180px;
 	    		width: 100%;
-	    		padding: 20px 0;
+	    		background: url(images/bg-2.png);
+	    		background-size: 100% 100%;
 	    	}
-	    	#signupform{
-	    		padding: 0 15px;
+	    	.left-top{
+	    		background: none!important;
+	    		border: none;
+	    		box-shadow: none;
+	    		width: 13%;
+	    		margin: 5px;
 	    	}
-	    	#btn-up{
-	    		margin: 10px 0;
-	    		display: none;
+	    	.ui-panel-inner{
+	    		padding: 0;
+	    		margin: 0;
+	    		box-shadow: none;
 	    	}
-	    	#sub-btnup{
-	    		margin: 10px 0;
+	    	.text{
+	    		margin-top: 20px;
+	    		padding-left: 20px;
+	    		font-size: 14px;
+	    		color: #777;
 	    	}
-	    	#telerr{
-	    		color: red;
+	    	.listimg{
+	    		width: 50px;
+	    		float: left;
+	    		margin-right: 5px;
+	    		border-radius: 50%;
+	    	}
+	    	#span{
+	    		/*display: inline-block;*/
+	    		/*font-weight: bold;*/
+	    		overflow: hidden;
+	    		color: #fff;
+	    		float: left;
+	    		font-size: 27px;
+	    		line-height: 50px;
+	    		padding-bottom: 10px;
+	    	}
+	    	#level span{
+	    		margin-right:5px;
+	    		padding: 2px 4px;
+	    		background: red;
+	    		color: white;
+
+	    		border-radius:3px ;
+	    		/*width: 50px;*/
+	    	}
+	    	#vip{
+	    		font-size: 10px;
+	    	}
+	    	#personal_name{
+	    		margin-top: 5px;
+	    	}
+	    	#leftlist{
+	    		list-style: none;
+	    		padding: 5px;
+	    	}
+	    	#leftlist li{
+	    		margin: 15px;
+	    		/*font-size: 18px;*/
+	    	}
+	    	#leftlist li img{
+	    		/*border-radius: none!important;*/
+	    		float: left;
+	    		width: 20px;
+	    		margin-right:10px ;
+	    	}
+	    	#leftlist li a{
+	    		text-decoration: none;
+	    		color: #333;
+	    	}
+	    	#leftlist li a div{
+	    		font-size: 14px;
+	    		line-height: 25px;
+	    	}
+	    	.botli{
+	    		float: left;
+	    		width: 40%;
+	    		/*display: inline;*/
+	    		padding-left:15px;
+	    		list-style: none;
+	    	}
+	    	.botli a{
+	    		color: #333;
+	    		text-decoration: none;
+	    		font-size: 14px;
+	    	}
+	    	.botimg{
+	    		margin-right: 10px;
+	    		width: 20px;
+	    		float: left;
+	    	}
+	    	.bottomdiv{
+	    		margin-top: 40px;
+	    		/*position:relative;*/
+	    		/*bottom: 0;*/
 	    	}
 	    </style>
 	</head>
 	<body>
 		
-		<!--pageone-->
-		<div data-role='page' id="pageone">
-			<img id="QQ-login" src="images/QQ-login.png"/>
-			
-			<form id="loginform"> 
-				<input type="text" id="username" placeholder="1233456">
-				<input type="password" id="password" placeholder="123456"/>
-				
-				<!--错误信息提示弹窗-->
-				<p id="error"></p>
-				
-				<a href="#pagethree" data-mini='true' data-role='button' id="btn-signup" class="btn-login">注册</a>
-				<a data-mini='true' data-role='button' id="subbtn" class="btn-login">登录</a>
-				<a href="#pagetwo" data-mini='true' data-role='button' id="btn-signin" class="btn-login">登录</a>
-			</form>
-		</div>
+		
 		
 		<!--pagetwo-->
 		<div data-role="page" id="pagetwo">
 			
 			<!--头部-->
 		    <div class="header" data-role="header">
-		    	<a href="#" data-role='none'>
+		    	<a href="#myPanel" data-role='none'>
 		    		<img class="QQtx" style="width: 40px;" src='images/QQ.jpg' alt=""/>
 		    	</a>
 		    	<!--<a href="#" data-icon='person' data-iconpos='notext'></a>-->
 		        <h1>消息</h1>
 		        <a href="#" data-role='button' data-icon='plus' data-iconpos='notext'></a>
+		    </div>
+		    
+		    <!--侧边栏-->
+		    <div data-role="panel" id="myPanel" class="ui-panel-fixed"> 
+		        <div class="topdiv">
+		        	<a class="left-top"  data-role='button' data-icon='calendar'>打卡</a>
+		        	<div class="text">
+		        		<img class="listimg" src="images/QQ.jpg" />
+		        		<div id="span">
+		        			拂树'生花︿Sun
+		        		</div>
+		        		<!--<span></span>-->
+		        		<div id="level">
+		        			<span id="vip">VIP7</span>等级：49
+		        		</div>
+		        		<div id="personal_name">
+		        			世界很大，留你独自悲哀。
+		        		</div>
+		        	</div>
+		        </div>
+		        
+		        <div class="listdiv">
+		        	<ul id="leftlist">
+		        		<li><a href="#"><img src="images/ace.png"/><div>我的QQ会员</div></a></li>
+		        		<li><a href="#"><img src="images/money.png"/><div>QQ钱包</div></a></li>
+		        		<li><a href="#"><img src="images/draw.png"/><div>个性装扮</div></a></li>
+		        		<li><a href="#"><img src="images/starfile.png"/><div>我的收藏</div></a></li>
+		        		<li><a href="#"><img src="images/image.png"/><div>我的相册</div></a></li>
+		        		<li><a href="#"><img src="images/file.png"/><div>我的文件</div></a></li>
+		        		<li><a href="#"><img src="images/wifi.png"/><div>免流量特权</div></a></li>
+		        	</ul>
+		        </div>
+		        <div class="bottomdiv">
+		        	<ul>
+		        		<li class="botli">
+		        			<a>
+		        				<img class="botimg" src="images/set.png"/>
+		        				<div>设置</div>
+		        			</a>
+		        		</li>
+		        		<li class="botli">
+		        			<a>
+		        				<img class="botimg" src="images/moon.png"/>
+		        				<div>夜间模式</div>
+		        			</a>
+		        		</li>
+		        	</ul>
+		        </div>
+		        
 		    </div>
 			
 		    <div data-role="content">
@@ -171,7 +252,7 @@
 
 			          		<div class="info">消息消息消息消息消息消息<span class="ui-li-count">99+</span></div>
 			          	
-			          </a>
+			          	</a>
 			        </li>
 		            
 		            <li data-icon='false'>
@@ -267,117 +348,26 @@
 		    <div data-role="footer" data-position='fixed'>
 			    <div data-role="navbar" data-iconpos='top'>
 		      		<ul>
-				        <li><a href="#" data-icon="info" class="ui-btn-active-persist">消息</a></li>
-				        <li><a href="#" data-icon="grid" class="ui-btn-active-persist">联系人</a></li>
-				        <li><a href="#" data-icon="star" class="ui-btn-active-persist">动态</a></li>
+				        <li><a href="QQ-info.html" rel="external" data-icon="info">消息</a></li>
+                        <li><a href="QQ-friends.html" rel="external" data-icon="grid">联系人</a></li>
+                        <li><a href="QQ-news.html" rel="external" data-icon="star">动态</a></li>
 				    </ul>
 		    	</div>
 			</div>
-	    </div> 
+	   </div> 
 	
-		<!--pagethree-->
-		<div data-role='page' id="pagethree">
-				<img id="QQ-signup" src="images/QQ-login.png" />
-			
-			<form id="signupform">
-
-				<input id="text" type="text" placeholder="昵称"/>
-				<input id="passwd" type="password" placeholder="密码"/>
-				<input id="tel" type="text" placeholder="手机号"/>
-				<p id="telerr"></p>
-				<a id="sub-btnup" data-role='button' data-mini='true'>注册</a>
-				<a href="#pageone" id="btn-up" data-role='button' data-mini='true'>注册</a>
-			</form>
-		</div>
-	
+		
 	</body>
 	
 	<script>
 		
-//		pageone one one one one one one one one one one one one
-        //取元素
-		var username = document.getElementById('username');
-		var pwd = document.getElementById('password');
-		var btnup = document.getElementById('btn-signup');
-		var btnin = document.getElementById('btn-signin');	
-		var err = document.getElementById('error');
-//		console.log(err.innerHTML);
-		
-		$('#subbtn').click(function(){
-			if(username.value == ''){
-				err.innerHTML = '帐号不能为空！';
-			}else if(pwd.value == ''){
-				err.innerHTML = '密码不能为空！';
-			}else{
-				$.ajax({
-					type:"get",
-					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
-					data:{status:'login',userID:username.value,password:pwd.value},
-					success:function(data){
-						console.log(data);
-						if(data == 0){
-	//						console.log(err.innerHTML);
-							err.innerHTML = '用户名不存在！';
-						}
-						else if(data == 2){
-							err.innerHTML = '用户名与密码不符！';
-						}
-						else{
-							$('#btn-signin').click();
-	//						location.href = 'http://www.baidu.com'
-						}
-					},
-					error:function(err){
-						console.log(err.message);
-					}
-				})
-			}	
-		})
+//		
 		
 			
 			
 		
 		
-//		pagethree three three three three three three three three three
-		var textname = document.getElementById('text');
-		var paswd = document.getElementById('passwd');
-		var tel = document.getElementById('tel');
-		var telerr = document.getElementById('telerr');
-		
-		$('#sub-btnup').click(function(){
-			if(textname.value == ''){
-				telerr.innerHTML = '昵称不能为空！';
-			}else if(paswd.value == ''){
-				telerr.innerHTML = '密码不能为空！';
-			}else if(tel.value == ''){
-				telerr.innerHTML = '手机号不能为空！';
-			}else{
-				$.ajax({
-					type:"get",
-					url:"http://datainfo.duapp.com/shopdata/userinfo.php",
-					data:{status:'register',userID:tel.value,password:paswd.value},
-					success:function(data){
-						console.log(data);
-						if(data == 0){
-	//						console.log(err.innerHTML);
-							telerr.innerHTML = '手机号已注册！';
-	//						btnin.href='';
-						}
-						else if(data == 2){
-							telerr.innerHTML = '数据库报错！';
-	//						btnin.href='';
-						}
-						else if(data == 1){
-							$('#btn-up').click();
-						}
-					},
-					error:function(err){
-						console.log(err.message);
-	//					document.write(err.message);
-					}
-				})
-			}
-		})
+
 		//username:1233456 password:123456
 		
 	
